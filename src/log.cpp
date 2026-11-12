@@ -85,4 +85,29 @@ void ClearTerm(void)
         {symbol = getchar();}
 }
 
+/// @brief calculate file size by stat structure
+/// @param file_name file name
+/// @return file size in bites
+ssize_t SizeofFile(const char *file_name)
+{
+    PR_FST;
+    assert(file_name);
+
+    struct stat statistics = {};
+    ssize_t fsize = -1;
+
+    if (stat(file_name, &statistics) == 0)
+    {
+        fsize = (ssize_t)statistics.st_size;
+        PR("Размер файла: %zd байт\n", fsize);
+    }
+    else 
+    {
+        perror("Ошибка при вызове stat");
+    }
+
+    PR_FED;
+    return fsize;
+}
+
 #endif
