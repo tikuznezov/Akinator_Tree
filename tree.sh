@@ -1,2 +1,2 @@
-g++ src/tree.cpp -o tree
+g++ src/main.cpp -o tree
 # chmod +x имя_файла.sh

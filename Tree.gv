@@ -1,22 +1,38 @@
 
 
-digraph main {
+digraph TreeVerifyDEF {
 rankdir=TB; splines=ortho; nodesep = 1; bgcolor="#FFFFFF";
 node [shape = Mrecord, style = filled, fillcolor = "#626ae0", fontcolor = "#ffffff", fontname="Helvetica-Bold"];
 
-# ZERO NODE
-	n0x0 [label="Root parent"];
+	n0x11e6060c0 [label="{Tree element 0x11e6060c0.| open system | parent = 0x0 |{ left = 0x11e6061a0 | right = 0x11f804080 }}"];
+	n0x11e6060c0 -> n0x11e6061a0 [taillabel = "no"];
+	n0x11e6060c0 -> n0x11f804080 [taillabel = "yes"];
 
-	n0x152605fa0 [label="{Tree element 0x152605fa0.| arg = 1488.12  | parent = 0x0 |{ left = 0x152605d10 | right = 0x0 }}"];
-	n0x152605fa0:n -> n0x0:s [color = green];
-	n0x152605fa0 -> n0x152605d10;
-	NULL_R_0x152605fa0 [label="NULL", fillcolor = "#000000"];
-	n0x152605fa0 -> NULL_R_0x152605fa0;
+	n0x11e6061a0 [label="{Tree element 0x11e6061a0.| pc system | parent = 0x11e6060c0 |{ left = 0x11e606280 | right = 0x11e704080 }}"];
+	n0x11e6061a0 -> n0x11e606280 [taillabel = "no"];
+	n0x11e6061a0 -> n0x11e704080 [taillabel = "yes"];
 
-	n0x152605d10 [label="{Tree element 0x152605d10.| arg = 111      | parent = 0x152605fa0 |{ left = 0x0 | right = 0x0 }}"];
-	n0x152605d10:n -> n0x152605fa0:s [color = green];
-	NULL_L_0x152605d10 [label="NULL", fillcolor = "#000000"];
-	n0x152605d10 -> NULL_L_0x152605d10;
-	NULL_R_0x152605d10 [label="NULL", fillcolor = "#000000"];
-	n0x152605d10 -> NULL_R_0x152605d10;
+	n0x11e606280 [label="{Tree element 0x11e606280.| unreal | parent = 0x11e6061a0 |{ left = 0x11e606360 | right = 0x11e606440 }}"];
+	n0x11e606280 -> n0x11e606360 [taillabel = "no"];
+	n0x11e606280 -> n0x11e606440 [taillabel = "yes"];
+
+	n0x11e606360 [label="{Tree element 0x11e606360.| Ios | parent = 0x11e606280 |{ left = 0x0 | right = 0x0 }}"];
+
+	n0x11e606440 [label="{Tree element 0x11e606440.| fiction | parent = 0x11e606280 |{ left = 0x0 | right = 0x0 }}"];
+
+	n0x11e704080 [label="{Tree element 0x11e704080.| MacOs | parent = 0x11e6061a0 |{ left = 0x0 | right = 0x0 }}"];
+
+	n0x11f804080 [label="{Tree element 0x11f804080.| pc system | parent = 0x11e6060c0 |{ left = 0x11f804160 | right = 0x11e704160 }}"];
+	n0x11f804080 -> n0x11f804160 [taillabel = "no"];
+	n0x11f804080 -> n0x11e704160 [taillabel = "yes"];
+
+	n0x11f804160 [label="{Tree element 0x11f804160.| Android | parent = 0x11f804080 |{ left = 0x0 | right = 0x0 }}"];
+
+	n0x11e704160 [label="{Tree element 0x11e704160.| not opensource | parent = 0x11f804080 |{ left = 0x11e704280 | right = 0x11e704360 }}"];
+	n0x11e704160 -> n0x11e704280 [taillabel = "no"];
+	n0x11e704160 -> n0x11e704360 [taillabel = "yes"];
+
+	n0x11e704280 [label="{Tree element 0x11e704280.| Linux | parent = 0x11e704160 |{ left = 0x0 | right = 0x0 }}"];
+
+	n0x11e704360 [label="{Tree element 0x11e704360.| Chrome os | parent = 0x11e704160 |{ left = 0x0 | right = 0x0 }}"];
 }
